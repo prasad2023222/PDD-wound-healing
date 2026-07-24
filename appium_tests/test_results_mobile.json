@@ -1,0 +1,90 @@
+{
+    "summary": {
+        "total": 11,
+        "passed": 11,
+        "failed": 0,
+        "duration_seconds": 640.0852844715118,
+        "device": "49JV456S55RGFIN7",
+        "platform": "Android",
+        "timestamp": "2026-06-11 16:33:10"
+    },
+    "steps": [
+        {
+            "step": "Splash Screen Load",
+            "description": "Verify splash screen loads and redirects to onboarding after 2s",
+            "status": "PASS",
+            "duration": 9.32,
+            "error": ""
+        },
+        {
+            "step": "Onboarding Navigation",
+            "description": "Navigate through the 3 onboarding pages",
+            "status": "PASS",
+            "duration": 5.62,
+            "error": ""
+        },
+        {
+            "step": "Signup Efficacy",
+            "description": "Register a new user account (or confirm already exists)",
+            "status": "PASS",
+            "duration": 36.13,
+            "error": ""
+        },
+        {
+            "step": "Login Verification",
+            "description": "Log in with credentials and verify redirection",
+            "status": "PASS",
+            "duration": 23.04,
+            "error": ""
+        },
+        {
+            "step": "Consent Checklist",
+            "description": "Toggle Camera Access and Secure Data switches and accept",
+            "status": "PASS",
+            "duration": 4.53,
+            "error": ""
+        },
+        {
+            "step": "Profile Setup Onboarding",
+            "description": "Submit age, gender, habits, and symptoms questionnaire",
+            "status": "PASS",
+            "duration": 97.29,
+            "error": ""
+        },
+        {
+            "step": "Camera Photo Skip",
+            "description": "Skip optional oral palate photo scan and open dashboard",
+            "status": "PASS",
+            "duration": 34.14,
+            "error": ""
+        },
+        {
+            "step": "Bottom Tab Transitions",
+            "description": "Navigate through Progress, Insights, Reports, Profile, and Home tabs",
+            "status": "PASS",
+            "duration": 111.12,
+            "error": ""
+        },
+        {
+            "step": "Daily Log Submission",
+            "description": "Log symptoms, habits, and notes and submit successfully",
+            "status": "PASS",
+            "duration": 121.97,
+            "error": ""
+        },
+        {
+            "step": "Reminders Lifecycle",
+            "description": "Add, toggle, and delete a daily health reminder successfully",
+            "status": "PASS",
+            "duration": 146.17,
+            "error": ""
+        },
+        {
+            "step": "Logout Verification",
+            "description": "Log out of patient profile and redirect to Login Screen",
+            "status": "PASS",
+            "duration": 2.9,
+            "error": ""
+        }
+    ]
+}

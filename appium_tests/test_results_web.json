@@ -1,0 +1,90 @@
+{
+    "summary": {
+        "total": 11,
+        "passed": 5,
+        "failed": 6,
+        "duration_seconds": 195.1299934387207,
+        "device": "Chrome Browser",
+        "platform": "Web",
+        "timestamp": "2026-06-11 18:04:16"
+    },
+    "steps": [
+        {
+            "step": "Splash Screen Load",
+            "description": "Verify splash screen loads and redirects to onboarding",
+            "status": "PASS",
+            "duration": 3.32,
+            "error": ""
+        },
+        {
+            "step": "Onboarding Navigation",
+            "description": "Navigate through the 3 onboarding pages",
+            "status": "PASS",
+            "duration": 5.4,
+            "error": ""
+        },
+        {
+            "step": "Signup Efficacy",
+            "description": "Register a new user account (or confirm already exists)",
+            "status": "PASS",
+            "duration": 10.92,
+            "error": ""
+        },
+        {
+            "step": "Login Verification",
+            "description": "Log in with credentials and verify redirection",
+            "status": "FAIL",
+            "duration": 25.18,
+            "error": "Timed out waiting for post-login screen"
+        },
+        {
+            "step": "Consent Checklist",
+            "description": "Toggle consent switches and accept",
+            "status": "PASS",
+            "duration": 0.0,
+            "error": ""
+        },
+        {
+            "step": "Profile Setup Onboarding",
+            "description": "Submit age, gender, habits, and symptoms questionnaire",
+            "status": "PASS",
+            "duration": 0.0,
+            "error": ""
+        },
+        {
+            "step": "Camera Photo Skip",
+            "description": "Skip optional oral scan and open dashboard",
+            "status": "FAIL",
+            "duration": 15.25,
+            "error": "Timed out waiting for Dashboard after camera skip"
+        },
+        {
+            "step": "Bottom Tab Transitions",
+            "description": "Navigate through Progress, Insights, Reports, Profile, Home tabs",
+            "status": "FAIL",
+            "duration": 16.34,
+            "error": "Could not navigate to tab: Progress"
+        },
+        {
+            "step": "Daily Log Submission",
+            "description": "Log symptoms, habits, and notes and submit",
+            "status": "FAIL",
+            "duration": 12.22,
+            "error": "find_and_click: element not found \u2013 text='Log symptoms'"
+        },
+        {
+            "step": "Reminders Lifecycle",
+            "description": "Add, toggle, and delete a health reminder",
+            "status": "FAIL",
+            "duration": 27.9,
+            "error": "find_and_click: element not found \u2013 text='Notifications'"
+        },
+        {
+            "step": "Logout Verification",
+            "description": "Log out and verify redirect to Login Screen",
+            "status": "FAIL",
+            "duration": 39.67,
+            "error": "'Log out' button not found on Profile screen"
+        }
+    ]
+}
