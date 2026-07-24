@@ -1,46 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="PDD Wound Healing & Oral Health AI App">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="oral_health_ai_app">
+  <meta name="apple-mobile-web-app-title" content="Oral Health AI">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>oral_health_ai_app</title>
+  <title>Oral Health AI - PDD Wound Healing</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #f8fafc;
+      overflow: hidden;
+    }
+    .loading-container {
+      text-align: center;
+    }
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-left-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 <body>
-  <!--
-    You can customize the "flutter_bootstrap.js" script.
-    This is useful to provide a custom configuration to the Flutter loader
-    or to give the user feedback during the initialization process.
+  <div class="loading-container" id="loading">
+    <div class="spinner"></div>
+    <div class="title">Oral Health & Wound Healing AI</div>
+    <div class="subtitle">Loading application...</div>
+  </div>
 
-    For more details:
-    * https://docs.flutter.dev/platform-integration/web/initialization
-  -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
