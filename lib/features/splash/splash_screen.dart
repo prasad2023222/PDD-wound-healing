@@ -24,12 +24,17 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> checkLoginStatus() async {
     await Future.delayed(const Duration(seconds: 2));
 
-    // TEMPORARY LINE
-    // This clears saved JWT token from local storage.
-    // Remove this line later after testing onboarding/login flow.
-    await ApiService.logout();
+    String? token;
+    try {
+      // TEMPORARY LINE
+      // This clears saved JWT token from local storage.
+      // Remove this line later after testing onboarding/login flow.
+      await ApiService.logout();
 
-    final token = await ApiService.getSavedToken();
+      token = await ApiService.getSavedToken();
+    } catch (e) {
+      debugPrint("Error reading token on splash screen: $e");
+    }
 
     if (!mounted) return;
 

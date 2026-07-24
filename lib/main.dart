@@ -21,18 +21,33 @@ void main() async {
     SemanticsBinding.instance.ensureSemantics();
   }
 
-  tz.initializeTimeZones();
-
-  String localTimeZone = 'Asia/Kolkata';
   try {
-    localTimeZone = await FlutterTimezone.getLocalTimezone();
+    tz.initializeTimeZones();
+    String localTimeZone = 'Asia/Kolkata';
+    try {
+      localTimeZone = await FlutterTimezone.getLocalTimezone();
+    } catch (e) {
+      debugPrint("Failed to get local timezone, falling back to Asia/Kolkata: $e");
+    }
+
+    try {
+      tz.setLocalLocation(tz.getLocation(localTimeZone));
+    } catch (_) {
+      try {
+        tz.setLocalLocation(tz.getLocation('Asia/Kolkata'));
+      } catch (_) {}
+    }
   } catch (e) {
-    debugPrint("Failed to get local timezone, falling back to Asia/Kolkata: $e");
+    debugPrint("Timezone initialization failed: $e");
   }
 
-  tz.setLocalLocation(tz.getLocation(localTimeZone));
-
-  await NotificationService.init();
+  if (!kIsWeb) {
+    try {
+      await NotificationService.init();
+    } catch (e) {
+      debugPrint("Notification initialization failed: $e");
+    }
+  }
 
   runApp(const MyApp());
 }
